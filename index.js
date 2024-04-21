@@ -1,6 +1,21 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  for(let i = 0 ; i < array.length; i++){
+    // console.log('i = ',i);
+    for(let j = i + 1 ;j < array.length ; j++ ){
+      // console.log('j = ',j);
+      let sum =array[i] + array[j] 
+      // console.log('array[i] = ',array[i],' array[j]= ',array[j],'sum = ',sum);
+      if(sum === target){
+        return true
+      }
+     
+
+    }
+    
+  }
+  return false
+  }
+console.log(hasTargetSum([4,9,7],6));
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +23,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  loop over the array and compare each item with each other 
+  if the summation of them = target 
+  return true
 */
 
 /*
